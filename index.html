@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>VLAD.</title>
+
+        <link rel="stylesheet" href="./styles/general.css" />
+        <link rel="stylesheet" href="./styles/header.css" />
+        <link rel="stylesheet" href="./styles/end_page.css" />
+    </head>
+    <body class="home-page">
+        <script src="./app.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="/" id="navbar__logo">VLAD.</a>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/index.html" class="navbar__links"> Accueil </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/blog.html" class="navbar__links"> À propos </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/blog.html" class="navbar__links"> Contacts </a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="#" class="button" id="newsletter-navbar-btn"> Rejoindre ma newsletter </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/" class="navbar__links">FR</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="div-main">
+                <div class="about-index">
+                    <img src="./images/test.jpg" alt="logo">
+                </div>
+                <p>
+                    Bienvenu sur mon site !
+                    
+                    Je m'appelle Vlad., jsuis actuellement étudiant en école d'ingénieur, et sur ce site je poste des articles sur mes recherches, mes réflexions
+                    et des explications sur les choses que j'apprends.
+                </p>
+
+                <div class="article-list">
+                    <ul>
+                        <li class="article-1">
+                            <a href="./articles/article_1/english/article_1.html">
+                                <b>Compréhension intuitive et approfondie des intégrales sur contours fermés - 09/04/2024</b>
+                            </a>
+                        </li>
+                    
+                        <li class="article-2">
+                            <b>Qu'est-ce qu'un champ vectoriel ? - 10/04/2024</b>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <br><br>
+        </main>
+        <div>
+            <div class="dash-end-page">
+                <div class="newsletter-banner">
+                    <form id="newsletter-form">
+                        <p>Rejoindre ma newsletter :</p>
+                        <input type="text" placeholder="Nom" required><br>
+                        <input type="email" id="newsletter-form-email" placeholder="Adresse e-mail" required><br>
+                        <button type="submit">Rejoindre</button>
+                        <p id="newsletter-example-banner">
+                            <a href="/" class="page-links">
+                                (Exemple de lettre envoyée)
+                            </a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

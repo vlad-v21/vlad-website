@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>VLAD.</title>
+        
+        <link rel="stylesheet" href="../../../styles/general.css" />
+        <link rel="stylesheet" href="../../../styles/header.css" />
+        <link rel="stylesheet" href="../../../styles/end_page.css" />
+        <link rel="stylesheet" href="../styles_a1.css" />
+
+    </head>
+    <body class="writting">
+        <script src="../../../app.js"></script>
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <nav class="navbar">
+            <div class="navbar__container">
+                <a href="/" id="navbar__logo">VLAD.</a>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="/index.html" class="navbar__links"> Accueil </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/blog.html" class="navbar__links"> À propos </a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="/blog.html" class="navbar__links"> Contacts </a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="#" class="button" id="newsletter-navbar-btn"> Rejoindre ma newsletter </a>
+                    </li>
+                    <li class="navbar__item">
+                            <a href="/" class="navbar__links">FR</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="div-main">
+                <div class="header">
+                    <h1>Compréhension intuitive et approfondie des <br>intégrales sur contours fermés</h1>
+                </div>
+                <p class="subheader">
+                    Par Vlad. le 11/04/2024.
+                </p>
+                <br>
+                <div class="composition-a1">
+                    <p>
+                        Dans cet article, je vais tâcher de vous donner une représentation intuitive et 
+                        surtout une interprétation physique des intégrales sur contours fermés que l'on 
+                        peut retrouver souvent dans les énoncés de physiques de classes préparatoires. 
+                        Cela vous permettra de mieux appréhender les exercices et les cours. Au delà de
+                        l'aspect purement pratique (si vous êtes étudiant), il est très intéressant de les comprendre,
+                        en dehors de toute institution académique.
+                    </p>
+
+                    <p>
+                        Dans le cadre de cette explication, il est préférable de connaître au préalable les 
+                        notions suivantes : 
+                        <ul class="list-a1-1">
+                            <li><a class="a1-toknow-link" href="https://fr.wikipedia.org/wiki/Scalaire_(math%C3%A9matiques)">Les scalaires</a>,</li>
+                            <li><a class="a1-toknow-link" href="https://fr.wikipedia.org/wiki/Vecteur">Les vecteurs</a>,</li>
+                            <li><a class="a1-toknow-link" href="https://fr.wikipedia.org/wiki/Champ_de_vecteurs">Les champs vectoriels</a>,</li>
+                            <li><a class="a1-toknow-link" href="https://fr.wikipedia.org/wiki/Produit_vectoriel">Le produit vectoriel</a>,</li>
+                            <li><a class="a1-toknow-link" href="https://fr.wikipedia.org/wiki/Calcul_infinit%C3%A9simal">Le calcul infinitésimal</a>,</li>
+                            <li><a class="a1-toknow-link" href="https://fr.wikipedia.org/wiki/Int%C3%A9gration_(math%C3%A9matiques)">Les intégrales</a>.</li>
+                        </ul>
+                        <br>
+                    </p>
+                    <p>
+                        Nous passerons cependant rapidement dessus durant les explications. Vous pouvez 
+                        sinon cliquer sur les différentes notions pour des explications plus approfondies.
+                    </p>
+                    <br>
+                    <p class="paragraph-title">Signification des différents symboles : </p>
+
+                    <br><br>
+
+                    <div class="image-1">
+                        <img style="width: 250px;" src="../images/french/fig-FR-7-1.png">
+
+                        <p>
+                            <span style="margin-left: 25px;">Avec :</span> 
+                            <ul>
+                                <li>
+                                    \(\overrightarrow{F}\) un champ vectoriel,
+                                </li>
+                                <li>
+                                    \(\overrightarrow{dl}\) un élément infinitésimal décrivant la circulation du contour  \(C\). 
+                                </li>
+                            </ul>
+                        </p>
+                    </div><br><br>
+
+                    <p>
+                        On appelle cette quantité la "<b>circulation</b>" du champ \(\overrightarrow{F}\) sur le contour \(C\), on reviendra sur 
+                        ce terme par la suite.
+
+                        <br><br><br>
+                        
+                        <p class="paragraph-title">Détaillons et illustrons les propos :</p>
+                        <ul>
+                            <li>
+                                Le <b>concour \(C\)</b> est un coutour <b>fermé</b> et <b>orienté</b>. C'est-à-dire qu'il entoure une 
+                                surface et qu'il a un sens de circulation.
+                            </li>
+
+                            <div class="image-1">
+                                <img style="width: 150px; padding: 20px;" src="../images/french/fig-FR-8-1.png" id="a1-fig-2">
+                                \(\Rightarrow \)
+                                <img style="width: 200px; padding: 20px;" src="../images/french/fig-FR-9-1.png" id="a1-fig-2">
+                            </div>
+
+                            <li>
+                                Un <b>contour est fermé</b> quand il forme une "boucle" : c'est-à-dire que ses
+                                deux extrémités sont connectées (voir la figure en dessous) :
+                            </li>
+                
+                            <div class="image-1">
+                                <img src="../images/french/fig_FR_2-1.png" id="a1-fig-2">
+                            </div>
+                            <br>
+                            Autrement dit, la ligne fermée doit <b>former une surface</b>.
+                            <br><br>
+                            <li>
+                                Le petit vecteur \(\overrightarrow{dl}\) est un élément infinitésimal
+                                du contour \(C\). Il est tangent à la courbe au point où il se trouve et a une magnitude de
+                                \(dl\).
+
+                                <div class="image-1">
+                                    <img src="../images/french/fig-FR-3-1.png" id="a1-fig-4">
+                                </div>
+
+                                <p>
+                                    Il en existe une infinité (il faut bien comprendre que le contour est presque entièrement décrit par
+                                    les éléments \(\overrightarrow{dl}\)).
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+
+                    <br>
+
+                    <p>
+                        <p class="paragraph-title">Le contenu sous l'intégrale :</p>
+                        Sous l'intégrale, nous avons : \( \overrightarrow{F} \cdot \overrightarrow{dl} \).
+                        <ul>
+                            <li>
+                                À gauche, c'est le champ vectoriel \(\overrightarrow{F}\) 
+                                 qui à chaque point
+                                de l'espace, retourne un vecteur. On pourrait l'écrire de la façon suivante : 
+                                \(\overrightarrow{F}(x, y, z) = \begin{bmatrix}
+                                F_x \\
+                                F_y \\
+                                F_z \\
+                                \end{bmatrix}\). Donc, à
+                                chaque point \((x, y, z)\), on obtient
+                                un vecteur décrivant le comportement du champ en ce point.
+                            </li>
+                            <br>
+                            <li>
+                                À droite, c'est l'élément infinitésimal \(\overrightarrow{dl}\) 
+                                dont on a parlé au dessus.
+                            </li>
+                        </ul>
+
+                        <br>
+
+                        <p>
+                            Il nous faut maintenant effectuer le produit scalaire de ses deux éléments. Pour bien
+                            comprendre, nous allons représenter le tout dans un espace à deux dimensions, et il
+                            suffira d'effectuer une manipulation analogue pour un espace à 3 dimensions ou plus.
+                            <br><br>
+                            Effectuer un produit scalaire signifie de faire la projection d'un vecteur sur l'autre : 
+                    
+                            <div class="image-1">
+                                <img src="../images/french/fig_FR_4-1.png" id="a1-fig-9">
+                                <p style="font-size: 20px;">\(\overrightarrow{F} \cdot \overrightarrow{dl} = \overrightarrow{F}_{//}\)</p>
+                            </div>
+
+                            <br><br>
+
+                            Il ne reste plus qu'à répeter cette action tout le long du contour, pour
+                            chaque éléments \(\overrightarrow{dl}\), et à sommer  
+                            l'ensemble des produits scalaires pour obtenir la circulation de \(\overrightarrow{F}\). 
+                            On appelle cette action plus communément : l'<b>intégration</b>.
+
+                            <br>
+
+                            $$ \oint_C \overrightarrow{F} \cdot \overrightarrow{dl} = circulation\ de\ \overrightarrow{F}\ sur\ C $$
+
+                        </p>
+                    </p>
+                    <br>
+                    <p>
+                        En observant le schéma ci-dessous, on se rend compte que l'action de sommer l'ensemble des projections (ou produits
+                        scalaires) de \(\overrightarrow{F}\) sur \(\overrightarrow{dl}\) nous donne un résultat qui représente <b>l'intensité
+                        avec laquelle le champ \(\overrightarrow{F} \ \) "tourne" autour du contour \(C\)</b>.
+                    
+                        <br><br>
+
+                        <div style="display: flex; align-items: center; justify-content: center;">
+                            <img style="width: 375px;" src="../images/french/fig-FR-4-1.png">
+
+                            <p style="margin-left: 50px;">
+                                <p>Dans ce schéma :</p> 
+                                <ul>
+                                    <li>
+                                        Les <span style="color: rgb(114, 114, 114);">lignes claires</span> représentent les lignes de 
+                                        champs de \(\overrightarrow{F}\),
+                                    </li>
+
+                                    <li>
+                                        Les <span style="color: rgb(24, 62, 255)">vecteurs bleus</span> sont des représentations de certains 
+                                        des vecteurs de \( \overrightarrow{F} \) au niveau du contour \( C \).
+                                    </li>
+                                    <li>
+                                        Au dessus, on a l'orientation du contour (choisi arbitrairement dans le sens antihoraire ici).
+                                    </li>
+
+                            </p>
+                        </div>
+
+                        <br><br>
+
+                        En effet, plus le vecteur se situant en un point du contour \(C\) sera orienté et dans le sens de circulation du contour,
+                        plus le résultat du produit scalaire sera grand, et plus il augmentera la somme finale (l'intégrale). Inversement, si certains vecteurs
+                        de \(\overrightarrow{F}\) sont dans un sens opposé à la circulation, le produit scalaire sera négatif, et donc, cela abaissera
+                        la somme totale :
+                        
+                        <br><br>
+
+                        <div style="display: flex; align-items: center; justify-content: center;">
+                            <img style="width: 150px;" src="../images/french/fig-FR-6-1.png">
+                            <p style="margin-left: 15px;">\( \overrightarrow{F} \cdot \overrightarrow{dl} > 0\)</p>
+
+                            <img style="width: 150px; margin-left: 100px;" src="../images/french/fig-FR-5-1.png">
+                            <p style="margin-left: 25px;">\( \overrightarrow{F} \cdot \overrightarrow{dl} < 0\)</p>
+                        </div>
+
+                        <br>
+
+                        Ainsi, plus le résultat de l'intégrale sera grand, plus le champ \( \overrightarrow{F}\) "tournera" le long du contour \(C\).
+                        <br>
+                        Dans l'exemple de la figure précédente, on voit que les vecteurs de \(\overrightarrow{F}\) sont presque tous dans le même sens
+                        que le sens du contour, on peut donc en déduire que le champ \(\overrightarrow{F}\) "tourne" le long du contour \(C\)
+                    </p>
+                    <br>
+                    <p>
+                        Cette notion d'intégrale sur contour fermé est très intéressante pour comprendre la notion de rotationnel 
+                        d'un champ de vecteurs.
+                    </p>
+
+                    <div style="align-items: center; display: flex; justify-content: center;">
+                        <p style="font-weight: bold;">
+                            J'espère que cet article vous a été utile, si vous avez des remarques ou si vous voulez me contacter, n'hésitez pas.
+                        </p>
+                    </div>
+
+                    <br><br>
+                </div>
+            </div>
+        </main>
+
+
+        <div>
+            <div class="dash-end-page">
+                <div class="newsletter-banner">
+                    <p>Rejoindre ma newsletter :</p>
+                    <input type="text" placeholder="Nom"><br>
+                    <input type="text" placeholder="Adresse e-mail"><br>
+                    <button type="submit">Rejoindre</button>
+                    <p id="newsletter-example-banner">
+                        <a href="/" class="page-links">
+                            (Exemple de lettre envoyée)
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
